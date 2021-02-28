@@ -13,9 +13,9 @@ const returnRandBase = () => {
     return newStrand
   }
   
-  const pAequorFactory = (specimanNum, dna) => {
+  const pAequorFactory = (specimanId, dna) => {
     return {
-      specimanNum,
+      specimanId,
       dna,
       mutate() {
         const randIndex = Math.floor(Math.random() * this.dna.length);
@@ -36,7 +36,7 @@ const returnRandBase = () => {
         }, 0);
         const percentOfDNAshared = (similarities / this.dna.length) * 100;
         const percentageTo2Deci = percentOfDNAshared.toFixed(2);
-        console.log(`${this.specimanNum} and ${otherOrg.specimanNum} have ${percentageTo2Deci}% DNA in common.`);
+        console.log(`${this.specimanId} and ${otherOrg.specimanId} have ${percentageTo2Deci}% DNA in common.`);
       },
       willLikelySurvive() {
         const cOrG = this.dna.filter(el => el === "C" || el === "G");
