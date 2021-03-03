@@ -56,4 +56,5 @@ const returnRandBase = () => {
     idCounter++;
   }
   
+  
   console.log(survivingSpecimen)
